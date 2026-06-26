@@ -1,98 +1,90 @@
-# EduConnect
+# Bem-vindo ao EduConnect
 
-## Sobre o Projeto
+Seja bem-vindo ao repositório do projeto **EduConnect**. Este espaço foi criado para centralizar todo o desenvolvimento do sistema, incluindo código-fonte, documentação e materiais do projeto.
 
-O **EduConnect** é um sistema de gestão escolar desenvolvido para centralizar os principais processos administrativos e acadêmicos de uma instituição de ensino. A plataforma permite o gerenciamento de alunos, professores, turmas, notas, frequência e comunicação entre a escola, os estudantes e seus responsáveis, proporcionando maior organização, eficiência e acessibilidade às informações.
+O objetivo deste repositório é facilitar a organização, o trabalho em equipe e o acompanhamento das entregas ao longo do desenvolvimento.
 
----
-
-# Estrutura do Projeto
-
-## 1. Visão Geral do Sistema
-
-**Responsáveis:** Todos os integrantes
-
-Apresentação do sistema, incluindo sua finalidade, público-alvo, principais funcionalidades, benefícios e contexto de utilização.
+A seguir, você encontrará um guia básico de como utilizar o GitHub dentro do projeto.
 
 ---
 
-## 2. Viabilidade
+# Guia de Uso do GitHub
 
-**Responsáveis:** Arthur Emmerich, Gabriel Garcia e Pedro Carvalho
+## Criar um arquivo
 
-Análise da viabilidade do projeto, considerando aspectos técnicos, financeiros, operacionais e a possibilidade de implementação da solução.
-
----
-
-## 3. Funcionalidades do Sistema
-
-**Responsáveis:** Arthur Emmerich, Gabriel Garcia e Pedro Carvalho
-
-Descrição das funcionalidades implementadas no sistema, detalhando o funcionamento de cada uma e sua contribuição para os processos de gestão escolar.
+1. Acesse o repositório.
+2. Clique em **Add file**.
+3. Selecione **Create new file**.
+4. No campo de nome, digite o nome do arquivo (ex: `docs/visao-geral.md`).
+5. Adicione o conteúdo do arquivo.
+6. Clique em **Commit changes** para salvar.
 
 ---
 
-## 4. Objetivos
+## Criar documentos
 
-**Responsáveis:** Todos os integrantes
+Para criar documentos dentro do projeto:
 
-Definição dos objetivos gerais e específicos do projeto, destacando os resultados esperados com a implementação do sistema.
-
----
-
-## 5. Regras de Negócio
-
-**Responsáveis:** Gabriel Garcia e Nicollas Duarte
-
-Descrição das regras que definem o comportamento do sistema e garantem o correto funcionamento dos processos acadêmicos e administrativos.
+* Utilize a pasta `docs/` para armazenar toda a documentação.
+* Crie arquivos em formato `.md` (Markdown) para melhor organização.
+* Sempre mantenha nomes claros e padronizados (ex: `regras-de-negocio.md`).
 
 ---
 
-## 6. Requisitos Não Funcionais
+## Apagar um arquivo
 
-**Responsáveis:** Gabriel Garcia e Nicollas Duarte
-
-Especificação dos requisitos relacionados ao desempenho, segurança, usabilidade, disponibilidade, confiabilidade e manutenção do sistema.
-
----
-
-## 7. Wireframe
-
-**Responsável:** Arthur Emmerich
-
-Apresentação dos protótipos de interface que demonstram a estrutura visual do sistema, a navegação entre as telas e a experiência do usuário.
+1. Abra o arquivo desejado no repositório.
+2. Clique no ícone de lixeira (**Delete this file**).
+3. Adicione uma mensagem de confirmação no commit.
+4. Clique em **Commit changes**.
 
 ---
 
-## 8. Documentação
+## Criar uma pasta
 
-**Responsáveis:** Ryan Nunes e Rafael Oschvat
+No GitHub, pastas são criadas automaticamente ao adicionar arquivos:
 
-Desenvolvimento da documentação técnica e funcional do projeto, contendo informações sobre arquitetura, utilização, estrutura do sistema e demais aspectos relevantes para seu entendimento e manutenção.
+1. Clique em **Add file** → **Create new file**.
+2. No nome do arquivo, digite:
 
----
+   ```
+   nome-da-pasta/nome-do-arquivo.md
+   ```
+3. Confirme com **Commit changes**.
 
-# Integrantes da Equipe
+Exemplo:
 
-* Arthur Emmerich
-* Gabriel Garcia
-* Rafael Oschvat
-* Nicollas Duarte
-* Ryan Nunes
-* Pedro Carvalho
-
----
-
-# Tecnologias Utilizadas
-
-* HTML5
-* CSS3
-* JavaScript
-* Git
-* GitHub
+```
+docs/requisitos.md
+```
 
 ---
 
-# Status do Projeto
+## Fixar arquivos ou repositórios
 
-**Em desenvolvimento.**
+O GitHub não permite fixar arquivos individuais dentro de um repositório. No entanto, é possível:
+
+* Destacar arquivos importantes no `README.md`
+* Criar uma seção de links para documentos importantes
+* Fixar repositórios no seu perfil
+
+### Para fixar repositórios no perfil:
+
+1. Acesse seu perfil no GitHub.
+2. Clique em **Customize your pins**.
+3. Selecione o repositório desejado.
+4. Salve as alterações.
+
+---
+
+## Boas práticas
+
+* Mantenha nomes de arquivos organizados e padronizados.
+* Atualize a documentação sempre que houver mudanças.
+* Utilize commits com mensagens claras.
+* Evite duplicação de arquivos.
+* Organize sempre dentro das pastas corretas.
+
+---
+
+Este repositório é colaborativo. A organização e manutenção dele dependem de todos os integrantes da equipe.
