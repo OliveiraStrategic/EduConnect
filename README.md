@@ -1,90 +1,107 @@
-# Bem-vindo ao EduConnect
+# EduConnect — Plataforma de Gestão Acadêmica Integrada
 
-Seja bem-vindo ao repositório do projeto **EduConnect**. Este espaço foi criado para centralizar todo o desenvolvimento do sistema, incluindo código-fonte, documentação e materiais do projeto.
-
-O objetivo deste repositório é facilitar a organização, o trabalho em equipe e o acompanhamento das entregas ao longo do desenvolvimento.
-
-A seguir, você encontrará um guia básico de como utilizar o GitHub dentro do projeto.
+O **EduConnect** é uma solução completa de gestão escolar desenvolvida para centralizar, automatizar e auditar os processos administrativos e pedagógicos de instituições de ensino. O sistema conecta alunos, professores e administradores em uma plataforma robusta, stateless e escalável.
 
 ---
 
-# Guia de Uso do GitHub
+## 🚀 Tecnologias Utilizadas (Stack Tecnológica)
 
-## Criar um arquivo
+### Backend
+* **Runtime:** Node.js (Express)
+* **Banco de Dados:** PostgreSQL (Persistência relacional com transações ACID)
+* **Cache Distribuído:** Redis (Caching de consultas pesadas e resiliência com auto-fallback)
+* **Segurança:** Helmet.js (hardening de cabeçalhos), CORS configurado, Rate Limiting (mitigação contra força bruta)
+* **Autenticação:** JWT (Access Tokens de curta duração + Refresh Tokens persistidos com Token Rotation)
+* **Suíte de Testes:** Jest + Supertest (Testes de integração automatizados)
+* **Documentação:** Swagger UI (OpenAPI 3.0)
 
-1. Acesse o repositório.
-2. Clique em **Add file**.
-3. Selecione **Create new file**.
-4. No campo de nome, digite o nome do arquivo (ex: `docs/visao-geral.md`).
-5. Adicione o conteúdo do arquivo.
-6. Clique em **Commit changes** para salvar.
-
----
-
-## Criar documentos
-
-Para criar documentos dentro do projeto:
-
-* Utilize a pasta `docs/` para armazenar toda a documentação.
-* Crie arquivos em formato `.md` (Markdown) para melhor organização.
-* Sempre mantenha nomes claros e padronizados (ex: `regras-de-negocio.md`).
+### Frontend
+* **Framework:** React + Vite (JavaScript)
+* **Comunicação HTTP:** Axios (com interceptores de resposta inteligentes para reprocessamento de requisições retidas e auto-refresh de tokens)
+* **Controle de Acesso:** Context API (RBAC para rotas protegidas)
+* **Visualização Analítica:** Chart.js + react-chartjs-2 (Gráficos interativos de atividades e divisão de usuários)
+* **Estilização:** CSS Moderno (Design responsivo e painéis glassmorphic)
 
 ---
 
-## Apagar um arquivo
+## 🛠️ Instruções de Instalação e Execução
 
-1. Abra o arquivo desejado no repositório.
-2. Clique no ícone de lixeira (**Delete this file**).
-3. Adicione uma mensagem de confirmação no commit.
-4. Clique em **Commit changes**.
+### Pré-requisitos
+* **Node.js** (versão >= 18)
+* **PostgreSQL** instalado e ativo
+* **Redis** (opcional para cache local, com fallback automático ativo)
+* **Docker & Docker Compose** (caso prefira rodar em contêineres)
 
 ---
 
-## Criar uma pasta
+### Execução Local (Modo Desenvolvimento)
 
-No GitHub, pastas são criadas automaticamente ao adicionar arquivos:
+#### 1. Configurando o Banco de Dados
+Crie um banco de dados vazio chamado `educonnect` no PostgreSQL e execute o script contido em:
+`database/schema.sql`
 
-1. Clique em **Add file** → **Create new file**.
-2. No nome do arquivo, digite:
-
-   ```
-   nome-da-pasta/nome-do-arquivo.md
-   ```
-3. Confirme com **Commit changes**.
-
-Exemplo:
-
-```
-docs/requisitos.md
+#### 2. Configurando o Backend
+Entre na pasta do backend, crie seu arquivo `.env` baseado no `.env.example` e instale as dependências:
+```bash
+cd backend
+cp .env.example .env
+npm install
 ```
 
----
+Popule o banco de dados com as contas iniciais de teste (seeding):
+```bash
+npm run seed
+```
 
-## Fixar arquivos ou repositórios
+Inicie o servidor de desenvolvimento:
+```bash
+npm run dev
+```
+O backend estará ativo em `http://localhost:5000`.
 
-O GitHub não permite fixar arquivos individuais dentro de um repositório. No entanto, é possível:
-
-* Destacar arquivos importantes no `README.md`
-* Criar uma seção de links para documentos importantes
-* Fixar repositórios no seu perfil
-
-### Para fixar repositórios no perfil:
-
-1. Acesse seu perfil no GitHub.
-2. Clique em **Customize your pins**.
-3. Selecione o repositório desejado.
-4. Salve as alterações.
-
----
-
-## Boas práticas
-
-* Mantenha nomes de arquivos organizados e padronizados.
-* Atualize a documentação sempre que houver mudanças.
-* Utilize commits com mensagens claras.
-* Evite duplicação de arquivos.
-* Organize sempre dentro das pastas corretas.
+#### 3. Configurando o Frontend
+Entre na pasta do frontend, crie seu arquivo `.env` baseado no `.env.example` e inicie o Vite:
+```bash
+cd ../frontend
+cp .env.example .env
+npm install
+npm run dev
+```
+O frontend estará acessível em `http://localhost:3000`.
 
 ---
 
-Este repositório é colaborativo. A organização e manutenção dele dependem de todos os integrantes da equipe.
+### Execução via Docker Compose (Recomendado para Produção)
+
+Você pode subir toda a infraestrutura (PostgreSQL + API Backend + Client Frontend servido por Nginx + Volumes Persistentes) com uma única instrução na raiz do projeto:
+
+```bash
+docker compose up --build -d
+```
+* **Frontend:** Acessível em `http://localhost:3000`
+* **API Backend:** Acessível em `http://localhost:5000/api`
+* **Documentação da API (Swagger):** Disponível em `http://localhost:5000/api-docs`
+
+Para derrubar os contêineres e manter os dados persistidos do PostgreSQL:
+```bash
+docker compose down
+```
+
+---
+
+## 🔐 Credenciais de Teste (Semeador de Dados)
+
+Após executar o script de seeding (`npm run seed` ou ao subir o contêiner do docker pela primeira vez), utilize as seguintes contas padrão para testar o sistema:
+
+| Perfil | E-mail de Acesso | Senha Padrão | CPF Cadastrado |
+| :--- | :--- | :--- | :--- |
+| **Administrador** | `admin@educonnect.com.br` | `admin123` | `11111111111` |
+| **Professor** | `professor@educonnect.com.br` | `professor123` | `22222222222` |
+| **Aluno** | `aluno@educonnect.com.br` | `aluno123` | `33333333333` |
+
+---
+
+## 📊 Informações de API e Auditoria
+* **Documentação Swagger:** A documentação completa de endpoints está disponível em `http://localhost:5000/api-docs`.
+* **Logs e Auditoria:** Toda ação de CRUD de usuários, logins e logouts são auditados em tempo real na tabela `logs` no PostgreSQL.
+* **Notificações Internas:** Ações críticas geram alertas no painel superior do usuário em tempo real.

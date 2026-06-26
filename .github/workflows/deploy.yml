@@ -1,0 +1,74 @@
+name: CI/CD Pipeline - EduConnect
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  validate-and-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+          cache-dependency-path: |
+            backend/package-lock.json
+            frontend/package-lock.json
+
+      # --- BACKEND VALIDATION ---
+      - name: Install Backend Dependencies
+        run: |
+          cd backend
+          npm ci
+
+      - name: Validate Backend Syntax
+        run: |
+          cd backend
+          node --check app.js
+          node --check database.js
+          node --check seed.js
+
+      # --- FRONTEND BUILD ---
+      - name: Install Frontend Dependencies
+        run: |
+          cd frontend
+          npm ci
+
+      - name: Build Frontend (Vite)
+        env:
+          VITE_API_URL: http://localhost:5000/api
+        run: |
+          cd frontend
+          npm run build
+
+      # --- DOCKER BUILD VALIDATION ---
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Backend Docker Image
+        uses: docker/build-push-action@v5
+        with:
+          context: ./backend
+          push: false
+          tags: educonnect/backend:latest
+
+      - name: Build Frontend Docker Image
+        uses: docker/build-push-action@v5
+        with:
+          context: ./frontend
+          push: false
+          build-args: |
+            VITE_API_URL=http://localhost:5000/api
+          tags: educonnect/frontend:latest

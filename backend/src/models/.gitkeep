@@ -1,0 +1,3 @@
+# Mantém a pasta de models no repositório.
+# Em uma arquitetura PostgreSQL nativa com pools, as definições de modelo podem
+# ser mapeadas como schemas, DTOs ou entidades de persistência.
