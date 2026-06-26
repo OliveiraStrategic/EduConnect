@@ -1,43 +1,98 @@
-# EduConnect – Plataforma de Gestão Escolar Integrada
+# EduConnect
 
-## Descrição do Projeto
+## Sobre o Projeto
 
-O **EduConnect** é uma plataforma web desenvolvida para integrar e modernizar os processos de gestão escolar. O sistema centraliza informações acadêmicas e administrativas em um único ambiente, permitindo o gerenciamento de alunos, professores, turmas, notas, frequência e comunicação entre a instituição de ensino, os estudantes e seus responsáveis.
+O **EduConnect** é um sistema de gestão escolar desenvolvido para centralizar os principais processos administrativos e acadêmicos de uma instituição de ensino. A plataforma permite o gerenciamento de alunos, professores, turmas, notas, frequência e comunicação entre a escola, os estudantes e seus responsáveis, proporcionando maior organização, eficiência e acessibilidade às informações.
 
-O projeto tem como finalidade oferecer uma solução eficiente para a administração escolar, promovendo maior organização, transparência e agilidade nos processos, além de facilitar o acompanhamento do desempenho acadêmico dos alunos.
+---
 
-## Objetivo
+# Estrutura do Projeto
 
-O principal objetivo do EduConnect é digitalizar a gestão escolar, proporcionando uma plataforma que simplifique os processos administrativos e acadêmicos, melhore a comunicação entre a escola e a comunidade escolar e contribua para uma gestão mais eficiente e organizada.
+## 1. Visão Geral do Sistema
 
-## Principais Funcionalidades
+**Responsáveis:** Todos os integrantes
 
-* Cadastro e gerenciamento de alunos, professores e turmas.
-* Registro e gerenciamento de notas.
-* Controle de frequência dos alunos.
-* Portal de acesso para alunos e responsáveis.
-* Envio de comunicados e avisos institucionais.
-* Emissão automática de boletins escolares.
+Apresentação do sistema, incluindo sua finalidade, público-alvo, principais funcionalidades, benefícios e contexto de utilização.
 
-## Usuários do Sistema
+---
 
-O sistema é destinado aos seguintes perfis de usuários:
+## 2. Viabilidade
 
-* Administradores
-* Professores
-* Alunos
-* Responsáveis
+**Responsáveis:** Arthur Emmerich, Gabriel Garcia e Pedro Carvalho
 
-## Fluxos Essenciais
+Análise da viabilidade do projeto, considerando aspectos técnicos, financeiros, operacionais e a possibilidade de implementação da solução.
 
-* O professor registra as notas e a frequência dos alunos.
-* O sistema realiza o cálculo automático das médias.
-* Após o processamento das informações, o boletim é disponibilizado para consulta.
-* Os responsáveis acessam o portal para acompanhar o desempenho acadêmico e a frequência do aluno.
+---
 
-## Regras de Negócio
+## 3. Funcionalidades do Sistema
 
-* As notas poderão ser alteradas somente até o encerramento do respectivo bimestre.
-* Cada aluno poderá estar vinculado a apenas uma turma durante um mesmo período letivo.
-* Apenas professores responsáveis pela turma poderão registrar ou alterar notas e frequência.
-* Administradores terão acesso às funcionalidades de gerenciamento e manutenção do sistema.
+**Responsáveis:** Arthur Emmerich, Gabriel Garcia e Pedro Carvalho
+
+Descrição das funcionalidades implementadas no sistema, detalhando o funcionamento de cada uma e sua contribuição para os processos de gestão escolar.
+
+---
+
+## 4. Objetivos
+
+**Responsáveis:** Todos os integrantes
+
+Definição dos objetivos gerais e específicos do projeto, destacando os resultados esperados com a implementação do sistema.
+
+---
+
+## 5. Regras de Negócio
+
+**Responsáveis:** Gabriel Garcia e Nicollas Duarte
+
+Descrição das regras que definem o comportamento do sistema e garantem o correto funcionamento dos processos acadêmicos e administrativos.
+
+---
+
+## 6. Requisitos Não Funcionais
+
+**Responsáveis:** Gabriel Garcia e Nicollas Duarte
+
+Especificação dos requisitos relacionados ao desempenho, segurança, usabilidade, disponibilidade, confiabilidade e manutenção do sistema.
+
+---
+
+## 7. Wireframe
+
+**Responsável:** Arthur Emmerich
+
+Apresentação dos protótipos de interface que demonstram a estrutura visual do sistema, a navegação entre as telas e a experiência do usuário.
+
+---
+
+## 8. Documentação
+
+**Responsáveis:** Ryan Nunes e Rafael Oschvat
+
+Desenvolvimento da documentação técnica e funcional do projeto, contendo informações sobre arquitetura, utilização, estrutura do sistema e demais aspectos relevantes para seu entendimento e manutenção.
+
+---
+
+# Integrantes da Equipe
+
+* Arthur Emmerich
+* Gabriel Garcia
+* Rafael Oschvat
+* Nicollas Duarte
+* Ryan Nunes
+* Pedro Carvalho
+
+---
+
+# Tecnologias Utilizadas
+
+* HTML5
+* CSS3
+* JavaScript
+* Git
+* GitHub
+
+---
+
+# Status do Projeto
+
+**Em desenvolvimento.**
