@@ -1,0 +1,12 @@
+obrigatório: horário de atualização, histórico de revisões em TABELA!(DATA, VERSÃO, DESCRIÇÃO DA ALTERAÇÃO, AUTOR), Identificação dos envolvidos(PAPEL, NOME, EMAIL INSTITUCIONAL), Criar uma logo, Problema do negocio, Viabilidade: Só podemos usar JavaScript. Funcionalidades do Sistema, INDICE ao final do documento, glossário!, em requisitos funcionais e não funcionais o principal sentido em NEGRITO, WireFrame de Media Resolução, 
+
+SCRUM -Framework 
+	|
+	|
+	-> LIDER
+	|
+	-> SCRUM MASTER		<--> SCRUM MASTER
+		|
+		->TEAM
+
+sobre scrum: O software para ser criado é separado em 4 sprints ou em 4 meses já que cada sprint pode durar no máximo 1 mês.  
