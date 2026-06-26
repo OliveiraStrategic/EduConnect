@@ -24,7 +24,16 @@ Análise da viabilidade do projeto, considerando aspectos técnicos, financeiros
 
 ---
 
-## 3. Objetivos
+## 3. Funcionalidades do Sistema
+
+**Responsáveis:** Arthur Emmerich, Gabriel Garcia e Pedro Carvalho
+
+Definir as funcionalidades utilizadas no sistemas e explicar como funcionam de jeito direto e indireto.
+
+
+---
+
+## 4. Objetivos
 
 **Responsáveis:** Todos os integrantes
 
@@ -32,7 +41,7 @@ Definição dos objetivos gerais e específicos do sistema, destacando os result
 
 ---
 
-## 4. Regras de Negócio
+## 5. Regras de Negócio
 
 **Responsáveis:** Gabriel Garcia e Nicollas Duarte
 
@@ -40,7 +49,7 @@ Descrição das regras que orientam o funcionamento do sistema e garantem o aten
 
 ---
 
-## 5. Requisitos Não Funcionais
+## 6. Requisitos Não Funcionais
 
 **Responsáveis:** Gabriel Garcia e Nicollas Duarte
 
@@ -48,7 +57,7 @@ Especificação dos requisitos relacionados ao desempenho, segurança, usabilida
 
 ---
 
-## 6. Wireframe
+## 7. Wireframe
 
 **Responsável:** Arthur Emmerich
 
@@ -56,7 +65,7 @@ Apresentação dos protótipos de interface que demonstram a estrutura visual e 
 
 ---
 
-## 7. Documentação
+## 8. Documentação
 
 **Responsáveis:** Ryan Nunes e Rafael Oschvat
 
@@ -77,15 +86,9 @@ Elaboração da documentação completa do projeto, incluindo detalhes técnicos
 
 ## 🚀 Tecnologias
 
-> *Adicionar as tecnologias utilizadas no desenvolvimento do projeto.*
-
-Exemplo:
-
 * HTML
 * CSS
 * JavaScript
-* Java
-* MySQL
 * Git e GitHub
 
 ---
